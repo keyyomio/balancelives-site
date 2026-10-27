@@ -20,7 +20,7 @@
 
 ## 게임 정보 업데이트
 
-두 게임의 출시 시기는 아직 미정입니다. 확정 시 각 카드의 release-info를 수정하세요. screenshot-placeholder를 실제 이미지(img.game-screenshot, width/height와 alt 포함) 및 설명으로 교체하고, store-links의 상태 문구를 실제 App Store/Google Play 링크로 교체하세요. 준비되지 않은 링크는 표시하지 않습니다.
+두 게임의 출시 시기는 아직 미정입니다. 확정 시 각 카드의 release-info를 수정하세요. 스크린샷은 `assets/games/my-pocket-terrarium-1.png` 또는 `assets/games/janggi-1.png`를 추가하면 자동으로 표시됩니다. HTML 수정 없이 파일만 올리면 됩니다. 세로 9:19.5 (권장 900×1950px) 화면을 사용하며 lazy loading이 적용됩니다. 다른 비율은 원본을 자르지 않고 프레임 안에 맞춥니다. 파일이 없거나 로드에 실패하면 준비 중 안내가 유지됩니다. 화면 내용을 구체적으로 설명하려면 index.html의 해당 `img`에 있는 `alt`를 수정하세요. store-links의 상태 문구를 실제 App Store/Google Play 링크로 교체하세요. 준비되지 않은 링크는 표시하지 않습니다.
 
 ## 로컬 확인
 

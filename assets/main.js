@@ -34,22 +34,18 @@ if (navigator.clipboard && window.isSecureContext) {
   });
 }
 
-// Add the documented PNG files to publish screenshots; keep a readable fallback.
-document.querySelectorAll('.game-screenshot').forEach(image => {
-  const caption = image.parentElement.querySelector('figcaption');
-  const showImage = () => {
-    image.hidden = false;
+// Templates stay inert until a screenshot file has been added and explicitly enabled.
+document.querySelectorAll('[data-screenshot-ready="true"]').forEach(frame => {
+  const image = frame.querySelector('template').content.firstElementChild.cloneNode(true);
+  const caption = frame.querySelector('figcaption');
+  image.addEventListener('load', () => {
     caption.hidden = true;
-  };
-  const showPlaceholder = () => {
-    image.hidden = true;
+  });
+  image.addEventListener('error', () => {
+    image.remove();
+    frame.classList.remove('has-screenshot');
     caption.hidden = false;
-  };
-  image.addEventListener('load', showImage);
-  image.addEventListener('error', showPlaceholder);
-  // A display:none lazy image may never load; reveal it after registering handlers.
-  image.hidden = false;
-  if (image.complete) {
-    image.naturalWidth > 0 ? showImage() : showPlaceholder();
-  }
+  });
+  frame.classList.add('has-screenshot');
+  frame.prepend(image);
 });

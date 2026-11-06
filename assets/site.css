@@ -18,3 +18,44 @@
 @media(max-width:720px){.company-name,.legal-footer{font-size:13px}.english-company{font-size:13px}.english-company div{grid-template-columns:65px minmax(0,1fr);gap:10px}.hero-meta{flex-wrap:wrap;row-gap:8px}.visual-note{letter-spacing:.8px}.footer-nav{gap:12px}.policy-links{column-gap:6px}}
 
 @media(max-width:720px){.site-footer a[href^="tel:"],.site-footer a[href^="mailto:"]{display:inline-flex;align-items:center;min-height:44px;padding:8px 2px}}
+
+/* 장기판 only — big open play CTA */
+.store-links:has(.janggi-play-btn){display:block;margin-top:18px}
+a.janggi-play-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  width:100%;
+  min-height:54px;
+  padding:14px 22px;
+  box-sizing:border-box;
+  border:2px solid #0b0d15;
+  border-radius:10px;
+  background:var(--lime);
+  color:#182017;
+  font-family:"Arial Black","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:18px;
+  font-weight:900;
+  letter-spacing:-.4px;
+  line-height:1.2;
+  text-decoration:none;
+  box-shadow:0 5px 0 #050609;
+  transition:transform .16s,box-shadow .16s,background .16s;
+  cursor:pointer;
+}
+a.janggi-play-btn:hover{
+  background:#d7ff8b;
+  transform:translateY(-2px);
+  box-shadow:0 7px 0 #050609;
+  color:#182017;
+}
+a.janggi-play-btn:active{
+  transform:translateY(3px);
+  box-shadow:0 2px 0 #050609;
+}
+a.janggi-play-btn span{font-family:Arial,sans-serif;font-size:22px;font-weight:900;line-height:1}
+@media(max-width:720px){
+  a.janggi-play-btn{min-height:52px;font-size:17px;padding:13px 18px;border-radius:9px;gap:12px}
+  a.janggi-play-btn span{font-size:20px}
+}

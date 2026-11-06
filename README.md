@@ -12,7 +12,7 @@
 
 ## 파일 구성
 
-- index.html: 국문 스튜디오 소개, 영문 About, 개발 중인 게임 및 연락처
+- index.html: 국문 스튜디오 소개, 영문 About, 게임 소개 및 연락처
 - assets/site.css, assets/main.js: 스타일 및 메뉴·이메일 복사 기능
 - assets/*.png: 기존 로고 기반 아이콘과 1200×630 공유 이미지
 - privacy/index.html, terms/index.html: 웹사이트 개인정보처리방침과 이용약관 (국문/영문)
@@ -20,7 +20,7 @@
 
 ## 게임 정보 업데이트
 
-두 게임의 출시 시기는 아직 미정입니다. 확정 시 각 카드의 release-info를 수정하세요. 스크린샷은 `assets/games/my-pocket-terrarium-1.png` 또는 `assets/games/janggi-1.png`를 추가한 뒤 index.html에서 해당 카드의 `data-screenshot-ready="false"`를 `data-screenshot-ready="true"`로 바꾸면 표시됩니다. 활성화 전에는 template 안의 이미지가 렌더링되거나 요청되지 않고 높이 약 120px의 준비 중 안내만 표시됩니다. 세로 9:19.5 (권장 900×1950px) 화면을 사용하며 lazy loading이 적용됩니다. 다른 비율은 원본을 자르지 않고 프레임 안에 맞춥니다. 파일이 없거나 로드에 실패하면 준비 중 안내가 유지됩니다. 화면 내용을 구체적으로 설명하려면 index.html의 해당 `img`에 있는 `alt`를 수정하세요. store-links의 상태 문구를 실제 App Store/Google Play 링크로 교체하세요. 준비되지 않은 링크는 표시하지 않습니다.
+장기판은 웹 출시됨. 마이 포켓 테라리움은 iOS 출시 준비 중. 카드의 release-info·스토어 링크를 상황에 맞게 수정하세요. 스크린샷은 `assets/games/my-pocket-terrarium-1.png` 또는 `assets/games/janggi-1.png`를 추가한 뒤 index.html에서 해당 카드의 `data-screenshot-ready="false"`를 `data-screenshot-ready="true"`로 바꾸면 표시됩니다. 활성화 전에는 template 안의 이미지가 렌더링되거나 요청되지 않고 높이 약 120px의 준비 중 안내만 표시됩니다. 세로 9:19.5 (권장 900×1950px) 화면을 사용하며 lazy loading이 적용됩니다. 다른 비율은 원본을 자르지 않고 프레임 안에 맞춥니다. 파일이 없거나 로드에 실패하면 준비 중 안내가 유지됩니다. 화면 내용을 구체적으로 설명하려면 index.html의 해당 `img`에 있는 `alt`를 수정하세요. store-links의 상태 문구를 실제 App Store/Google Play 링크로 교체하세요. 준비되지 않은 링크는 표시하지 않습니다.
 
 ## 로컬 확인
 

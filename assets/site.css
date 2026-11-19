@@ -128,3 +128,35 @@ a.janggi-play-btn span{font-family:Arial,sans-serif;font-size:22px;font-weight:9
   .janggi-phone-dots span.is-active,
   .terrarium-phone-dots span.is-active{background:#3445ef;opacity:1}
 }
+
+/* 마이 포켓 테라리움 — 4장을 2장씩 가로로 넘겨 보기 (장기판 카드와 높이 맞춤) */
+.terrarium-phone-shots{
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  padding:0 2px 6px;
+}
+.terrarium-phone-shots::-webkit-scrollbar{display:none}
+.terrarium-phone{
+  flex:0 0 calc(50% - 6px);
+  width:calc(50% - 6px);
+  scroll-snap-align:start;
+}
+.terrarium-phone-dots{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:7px;
+  margin:0 0 8px;
+}
+.terrarium-phone-dots span{
+  width:7px;height:7px;border-radius:50%;
+  background:#c5cad8;opacity:.55;
+}
+.terrarium-phone-dots span.is-active{background:#3445ef;opacity:1}
+@media(max-width:720px){
+  .terrarium-phone{flex:0 0 78%;width:78%;max-width:78%}
+}

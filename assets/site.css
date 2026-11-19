@@ -60,15 +60,17 @@ a.janggi-play-btn span{font-family:Arial,sans-serif;font-size:22px;font-weight:9
   a.janggi-play-btn span{font-size:20px}
 }
 
-/* 장기판 card — dual phone screenshots */
-.janggi-phone-shots{
+/* 장기판 / 마이 포켓 테라리움 card — phone screenshots */
+.janggi-phone-shots,
+.terrarium-phone-shots{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:12px;
   margin:18px 0 6px;
   align-items:start;
 }
-.janggi-phone{
+.janggi-phone,
+.terrarium-phone{
   margin:0;
   border:2px solid #0b1029;
   border-radius:16px;
@@ -76,14 +78,17 @@ a.janggi-play-btn span{font-family:Arial,sans-serif;font-size:22px;font-weight:9
   background:#12131b;
   box-shadow:0 4px 0 #111537;
 }
-.janggi-phone img{
+.janggi-phone img,
+.terrarium-phone img{
   display:block;
   width:100%;
   height:auto;
 }
-.janggi-phone-dots{display:none}
+.janggi-phone-dots,
+.terrarium-phone-dots{display:none}
 @media(max-width:720px){
-  .janggi-phone-shots{
+  .janggi-phone-shots,
+  .terrarium-phone-shots{
     display:flex;
     grid-template-columns:none;
     gap:12px;
@@ -97,24 +102,29 @@ a.janggi-play-btn span{font-family:Arial,sans-serif;font-size:22px;font-weight:9
     scrollbar-width:none;
     padding:0 2px 6px;
   }
-  .janggi-phone-shots::-webkit-scrollbar{display:none}
-  .janggi-phone{
+  .janggi-phone-shots::-webkit-scrollbar,
+  .terrarium-phone-shots::-webkit-scrollbar{display:none}
+  .janggi-phone,
+  .terrarium-phone{
     flex:0 0 78%;
     width:78%;
     max-width:78%;
     scroll-snap-align:start;
     border-radius:14px;
   }
-  .janggi-phone-dots{
+  .janggi-phone-dots,
+  .terrarium-phone-dots{
     display:flex;
     justify-content:center;
     align-items:center;
     gap:7px;
     margin:0 0 8px;
   }
-  .janggi-phone-dots span{
+  .janggi-phone-dots span,
+  .terrarium-phone-dots span{
     width:7px;height:7px;border-radius:50%;
     background:#c5cad8;opacity:.55;
   }
-  .janggi-phone-dots span.is-active{background:#3445ef;opacity:1}
+  .janggi-phone-dots span.is-active,
+  .terrarium-phone-dots span.is-active{background:#3445ef;opacity:1}
 }

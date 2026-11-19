@@ -19,9 +19,11 @@
 
 @media(max-width:720px){.site-footer a[href^="tel:"],.site-footer a[href^="mailto:"]{display:inline-flex;align-items:center;min-height:44px;padding:8px 2px}}
 
-/* 장기판 only — big open play CTA */
-.store-links:has(.janggi-play-btn){display:block;margin-top:18px}
-a.janggi-play-btn{
+/* 장기판 / 테라리움 — big store/play CTA */
+.store-links:has(.janggi-play-btn),
+.store-links:has(.terrarium-store-btn){display:block;margin-top:18px}
+a.janggi-play-btn,
+a.terrarium-store-btn{
   display:flex;
   align-items:center;
   justify-content:center;
@@ -44,20 +46,25 @@ a.janggi-play-btn{
   transition:transform .16s,box-shadow .16s,background .16s;
   cursor:pointer;
 }
-a.janggi-play-btn:hover{
+a.janggi-play-btn:hover,
+a.terrarium-store-btn:hover{
   background:#d7ff8b;
   transform:translateY(-2px);
   box-shadow:0 7px 0 #050609;
   color:#182017;
 }
-a.janggi-play-btn:active{
+a.janggi-play-btn:active,
+a.terrarium-store-btn:active{
   transform:translateY(3px);
   box-shadow:0 2px 0 #050609;
 }
-a.janggi-play-btn span{font-family:Arial,sans-serif;font-size:22px;font-weight:900;line-height:1}
+a.janggi-play-btn span,
+a.terrarium-store-btn span{font-family:Arial,sans-serif;font-size:22px;font-weight:900;line-height:1}
 @media(max-width:720px){
-  a.janggi-play-btn{min-height:52px;font-size:17px;padding:13px 18px;border-radius:9px;gap:12px}
-  a.janggi-play-btn span{font-size:20px}
+  a.janggi-play-btn,
+  a.terrarium-store-btn{min-height:52px;font-size:17px;padding:13px 18px;border-radius:9px;gap:12px}
+  a.janggi-play-btn span,
+  a.terrarium-store-btn span{font-size:20px}
 }
 
 /* 장기판 / 마이 포켓 테라리움 card — phone screenshots */
@@ -160,3 +167,8 @@ a.janggi-play-btn span{font-family:Arial,sans-serif;font-size:22px;font-weight:9
 @media(max-width:720px){
   .terrarium-phone{flex:0 0 78%;width:78%;max-width:78%}
 }
+
+.janggi-phone-dots span,
+.terrarium-phone-dots span{cursor:pointer;position:relative}
+.janggi-phone-dots span:after,
+.terrarium-phone-dots span:after{content:"";position:absolute;inset:-8px}
